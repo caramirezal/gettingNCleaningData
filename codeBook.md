@@ -1,5 +1,5 @@
 The ProcessData.R contains the code to process the data contained in the "UCI HAR Dataset" directory. The script most be executed using this directory as the working space. This data
-was obtained from publicly available data from the (Human Activity Recognition database)[http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones].
+was obtained from publicly available data from the [Human Activity Recognition database)](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 
 The humanActivityTidyData.csv file contains the processed date output of executing the ProcessData.R script.
