@@ -6,10 +6,10 @@ and the resulting processed tidy data.
 The ProcessData.R contains the code to process the data contained in the "UCI HAR Dataset" 
 directory. The script most be executed using this directory as the working space.
 
-The humanActivityTidyData.csv file contains the processed date output of executing
-the ProcessData.R script.
+The humanActivityTidyData.txt file contains the processed date output of executing
+the run_analysis.R script.
 
-The variables included in the table contained in the humanActivityTidyData.csv file are the
+The variables included in the table contained in the humanActivityTidyData.txt file are the
 following:
 
 activity: The experimental physical activity measured from the subject. It is a cathegorical

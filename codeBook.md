@@ -2,9 +2,9 @@ The ProcessData.R contains the code to process the data contained in the "UCI HA
 was obtained from publicly available data from the [Human Activity Recognition database)](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 
-The humanActivityTidyData.csv file contains the processed date output of executing the ProcessData.R script.
+The humanActivityTidyData.txt file contains the processed date output of executing the run_analysis.R script.
 
-The variables included in the table contained in the humanActivityTidyData.csv file are the following:
+The variables included in the table contained in the humanActivityTidyData.txt file are the following:
 
 activity: The experimental physical activity measured from the subject. It is a cathegorical value variable.
 
