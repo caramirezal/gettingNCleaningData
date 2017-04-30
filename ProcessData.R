@@ -69,6 +69,9 @@ activity <- actNSubjLabels[1,]
 labels <- cbind(t(activity),t(subject))
 processedData <- cbind(labels,meanVals)
 colnames(processedData)[1:2] <- c("activity","subject") 
-
-
-write.table(processedData,"humanActivityTidyData.csv",row.names = FALSE)
+processedData <- as.data.frame(processedData)
+for (i in 3:length(processedData)) {
+        processedData[,i] <- as.numeric(paste(processedData[,i]))
+}
+sapply(processedData,class)
+write.table(processedData,"humanActivityTidyData.txt",row.names = FALSE)
