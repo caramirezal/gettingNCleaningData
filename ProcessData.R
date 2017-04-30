@@ -1,4 +1,5 @@
 library(dplyr)
+library(plyr)
 
 n <- 19
 
@@ -55,8 +56,19 @@ mergedData[1:3,]
 
 
 meanVals <- lapply(split(mergedData,list(mergedData$activity,mergedData$subject)),function(x) colMeans(x[4:length(x)]))
-#meanVals <- sapply(split(mergedData,mergedData$subject), )
+
 meanVals <- as.data.frame(meanVals)
 meanVals <- t(meanVals)
-write.table(meanVals,"humanActivityTidyData.csv",row.names = FALSE)
+
 ##write.table(meanVals,)
+actNSubjLabels <- strsplit(rownames(meanVals),"\\.")
+actNSubjLabels <- as.data.frame(actNSubjLabels)
+
+subject <- actNSubjLabels[2,]
+activity <- actNSubjLabels[1,]
+labels <- cbind(t(activity),t(subject))
+processedData <- cbind(labels,meanVals)
+colnames(processedData)[1:2] <- c("activity","subject") 
+
+
+write.table(processedData,"humanActivityTidyData.csv",row.names = FALSE)
